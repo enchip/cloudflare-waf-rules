@@ -19,7 +19,6 @@
 (http.user_agent eq " ") or
 (http.user_agent eq "-") or
 (http.user_agent eq "'") or
-(http.user_agent eq "") or
 (http.host contains ":80") or (http.host contains ":443") or
 (http.user_agent contains "lient" and http.user_agent contains "ttp") or
 (http.user_agent contains "wrk") or (http.user_agent contains "hey/") or
