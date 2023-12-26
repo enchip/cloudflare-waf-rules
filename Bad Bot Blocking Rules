@@ -1,0 +1,28 @@
+(cf.threat_score gt 5) or
+(http.request.version in {"HTTP/1.0"} and not cf.client.bot) or
+(http.user_agent contains "scrapy" and not cf.client.bot) or
+(http.user_agent contains "spider" and not cf.client.bot) or
+(http.user_agent contains "crawl" and not cf.client.bot) or
+(http.user_agent contains "Go-http-client") or
+(http.user_agent contains "quic-go-HTTP") or
+(http.x_forwarded_for contains "192.0.") or
+(http.x_forwarded_for contains ".0.0") or
+(http.user_agent contains "fasthttp") or
+(http.user_agent contains "ALittle") or
+(http.user_agent contains "python") or
+(http.user_agent contains "'XOR(") or
+(http.user_agent contains "got (") or
+(http.user_agent contains "Nmap") or
+(http.user_agent contains "java") or
+(http.user_agent contains "PHP") or
+(http.user_agent contains "/x/") or
+(http.user_agent eq " ") or
+(http.user_agent eq "-") or
+(http.user_agent eq "'") or
+(http.user_agent eq "") or
+(http.host contains ":80") or (http.host contains ":443") or
+(http.user_agent contains "lient" and http.user_agent contains "ttp") or
+(http.user_agent contains "wrk") or (http.user_agent contains "hey/") or
+(http.user_agent contains "libweb") or (http.user_agent contains "libwww") or
+(ip.geoip.country in {"T1" "XX"} and not http.request.version in {"HTTP/2" "HTTP/3" "SPDY/3.1"} and not cf.client.bot) or
+(http.cookie contains "cf_use_ob=" and not http.cookie contains "0" and not http.cookie contains "80" and not http.cookie contains "443" and not cf.client.bot)
