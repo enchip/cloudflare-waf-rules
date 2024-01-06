@@ -3,7 +3,6 @@
 (http.user_agent eq "d1b2df322c91") or
 (http.user_agent eq "109e15941c57") or
 (http.user_agent eq "84bd2cfee733") or
-(http.request.full_uri contains ".php") or
 (http.request.full_uri contains "/.env") or
 (http.request.full_uri contains "/.git") or
 (http.request.full_uri contains "fI4y") or
